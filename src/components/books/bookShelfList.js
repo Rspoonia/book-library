@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import BookShelf from "./bookShelf"
-import { Link } from "react-router-dom"
 import * as BooksAPI from "../repository/booksApi"
 
+//TODO need to add search and add new books
 export default function BookShelfList() {
   /**
    * for show loading state
@@ -61,9 +61,6 @@ export default function BookShelfList() {
               />
             </div>
           </div>
-          {/* <div className="open-search">
-            <Link to="/search">Add a book</Link>
-          </div> */}
         </>
       )}
     </div>

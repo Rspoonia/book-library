@@ -8,7 +8,11 @@ body {
 
 body, .app {
   background: white;
-  display: flex;
+}
+@media (min-width: 600px) {
+.app{
+display: flex;
+}
 }
 
 /* main page */
@@ -50,68 +54,6 @@ body, .app {
   text-align: center;
 }
 
-.open-search {
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-}
-
-.open-search a {
-  display: block;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #5d8fe0;
-  background-image: url('./components/icons/add.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 28px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  font-size: 0;
-}
-
-/* search page */
-
-.search-books-bar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: flex;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 0 6px rgba(0, 0, 0, 0.23);
-}
-
-.search-books-input-wrapper {
-  flex: 1;
-  background: #e9e;
-}
-
-.search-books-bar input {
-  width: 100%;
-  padding: 15px 10px;
-  font-size: 1.25em;
-  border: none;
-  outline: none;
-}
-
-.close-search {
-  display: block;
-  top: 20px;
-  left: 15px;
-  width: 50px;
-  height: 53px;
-  background: white;
-  background-image: url('./components/icons/left-arrow.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 28px;
-  font-size: 0;
-}
-
-.search-books-results {
-  padding: 80px 10px 20px;
-}
 
 /* books grid */
 
@@ -187,11 +129,6 @@ body, .app {
   background: #eee;
 }
 
-.book-cover-title {
-  padding: 20px 10px 0;
-  text-align: center;
-  font-size: 0.8em;
-}
 
 .loader {
   border: 6px solid #f3f3f3; /* Light grey */
@@ -225,4 +162,7 @@ body, .app {
 }
 .dark-theme button {
   color: #000;
+}
+.modal-body {
+  text-align: center;
 }

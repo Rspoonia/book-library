@@ -1,6 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
+import { ImageDetails } from "../modal"
 
 const Book = ({ book, onShelfChange }) => {
+  const [show, setShow] = useState(false)
+
   const onBookShelfChange = (e) => {
     const shelf = e.target.value
     onShelfChange(book, shelf)
@@ -8,8 +11,10 @@ const Book = ({ book, onShelfChange }) => {
 
   return (
     <div className="book">
+      {show && <ImageDetails show={show} setShow={setShow} book={book} />}
       <div className="book-top">
         <div
+          onClick={() => setShow(true)}
           className="book-cover"
           style={{
             width: 128,
